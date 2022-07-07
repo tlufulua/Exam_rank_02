@@ -1,6 +1,6 @@
 # Exam Questions
 
-###LEVEL 1
+### LEVEL 1
 
 first_word
 fizzbuzz
@@ -15,7 +15,7 @@ rotone
 search_and_replace
 ulstr
 
-###LEVEL 2
+### LEVEL 2
 
 alpha_mirror
 camel_to_snake
@@ -38,7 +38,7 @@ swap_bits
 union
 wdmatch
 
-###LEVEL 3
+### LEVEL 3
 
 add_prime_sum
 epur_str
@@ -56,7 +56,7 @@ rstr_capitalizer
 str_capitalizer
 tab_mult
 
-###LEVEL 4
+### LEVEL 4
 
 flood_fill
 fprime
