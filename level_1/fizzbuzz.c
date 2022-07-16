@@ -6,35 +6,36 @@
 /*   By: tlufulua <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 22:41:58 by tlufulua          #+#    #+#             */
-/*   Updated: 2022/07/07 23:04:55 by tlufulua         ###   ########.fr       */
+/*   Updated: 2022/07/16 22:12:29 by tlufulua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
 
-int	main()
+int	main(void)
 {
-	float	x;
-	int		i;
+	int		x;
 	char	c;
 
-	i = 1;
-	while (i <= 100)
+	x = 1;
+	while (x <= 100)
 	{
-		c = i + 48;
-		x = i / 3;
-		printf("%f\n", x);
-		if (x - i)
+		if (!(x % 3))
 			write(1, "fizz", 4);
-		x = i / 5;
-		printf("%f\n", x);
-		if (x - i)
+		if (!(x % 5))
 			write(1, "buzz", 4);
-		else
+		if ((x % 3) && (x % 5))
+		{
+			if (x >= 10)
+			{
+				c = (x / 10) + '0';
+				write(1, &c, 1);
+			}
+			c = (x % 10) + '0';
 			write(1, &c, 1);
+		}
 		write(1, "\n", 1);
-		i++;
+		x++;
 	}
 	return (0);
 }
