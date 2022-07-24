@@ -6,7 +6,7 @@
 /*   By: tlufulua <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 20:54:21 by tlufulua          #+#    #+#             */
-/*   Updated: 2022/07/16 22:15:34 by tlufulua         ###   ########.fr       */
+/*   Updated: 2022/07/24 19:31:29 by tlufulua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,16 @@
 int	main(int argc, char **argv)
 {
 	int		i;
-	char	*s;
 
 	if (argc > 1)
 	{
 		i = 0;
-		s = argv[1];
-		while (s[i] == 32)
-			s++;
-		while (s[i] && s[i] != 32 && s[i] != 10 && (s[i] < 48 || s[i] > 57))
+		while (*argv[1] <= 32)
+			argv[1]++;
+		while (argv[1][i] > 32)
 			i++;
 		if (i > 1)
-			write(1, s, i);
+			write(1, argv[1], i);
 	}
 	write(1, "\n", 1);
 	return (0);
